@@ -22,16 +22,25 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
 
 /**
  * This shows how to create a simple activity with a map and a marker on the map.
  */
-public class BasicMapDemoActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class BasicMapDemoActivity extends AppCompatActivity
+        implements GoogleMap.OnMapClickListener, GoogleMap.OnMapLongClickListener, GoogleMap.OnCameraChangeListener,
+        OnMapReadyCallback {
+
+    private TextView mTapTextView;
+
+    private TextView mCameraTextView;
+
 
     private GoogleMap mMap;
 
@@ -45,6 +54,9 @@ public class BasicMapDemoActivity extends AppCompatActivity implements OnMapRead
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.basic_demo);
+
+        mTapTextView = (TextView) findViewById(R.id.tap_text);
+        mCameraTextView = (TextView) findViewById(R.id.camera_text);
 
         SupportMapFragment mapFragment =
                 (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
@@ -89,5 +101,29 @@ public class BasicMapDemoActivity extends AppCompatActivity implements OnMapRead
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(POS_DC,17.0f));
 
 
+        map.setOnMapClickListener(this);
+        map.setOnMapLongClickListener(this);
+        map.setOnCameraChangeListener(this);
+
     }
+
+    @Override
+    public void onMapClick(LatLng point) {
+        mTapTextView.setText("tapped, point=" + point);
+    }
+
+    @Override
+    public void onMapLongClick(LatLng point) {
+        mTapTextView.setText("long pressed, point=" + point);
+    }
+
+    @Override
+    public void onCameraChange(final CameraPosition position) {
+        mCameraTextView.setText(position.toString());
+    }
+
+
+
+
+
 }

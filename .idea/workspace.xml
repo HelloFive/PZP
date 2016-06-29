@@ -87,8 +87,8 @@
           <file leaf-file-name="BasicMapDemoActivity.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mapdemo/BasicMapDemoActivity.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.45967743">
-                  <caret line="33" column="91" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="91" />
+                <state vertical-scroll-proportion="-1.1048387">
+                  <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -168,8 +168,8 @@
           <file leaf-file-name="EventsDemoActivity.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mapdemo/EventsDemoActivity.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.21774194">
-                  <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="36" selection-end-column="28" />
+                <state vertical-scroll-proportion="0.9435484">
+                  <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -1760,6 +1760,7 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/mapdemo/UiSettingsDemoActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/mapdemo/BasicMapDemoActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/basic_demo.xml" />
       </list>
     </option>
   </component>
@@ -1837,6 +1838,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="menu" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PZP" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2117,11 +2136,11 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
           <folding>
-            <marker date="1467176724000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1467176724000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1467176724000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1467176724000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1467176724000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1467177600000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1467177600000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1467177600000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1467177600000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1467177600000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -2308,18 +2327,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/basic_demo.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9390863">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding>
+            <element signature="e#1634#1660#0" expanded="true" />
+            <element signature="e#1847#1872#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/events_demo.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.822335">
+          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mapdemo/EventsDemoActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21774194">
-          <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="36" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.9435484">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mapdemo/BasicMapDemoActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45967743">
-          <caret line="33" column="91" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="91" />
+        <state vertical-scroll-proportion="-1.1048387">
+          <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
