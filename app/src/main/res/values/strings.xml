@@ -24,8 +24,8 @@
 
     <string name="alpha">Alpha</string>
     <string name="animate">Animate</string>
-    <string name="basic_map_demo_label">Basic Map</string>
-    <string name="basic_map_demo_description">Launches a map</string>
+    <string name="basic_map_demo_label">PZP Test</string>
+    <string name="basic_map_demo_description">Lets test PZP!!!</string>
     <string name="buildings">Buildings</string>
     <string name="camera_demo_label">Camera</string>
     <string name="camera_demo_description">Demonstrates camera functions.</string>
@@ -42,7 +42,7 @@
     <string name="duration">Custom Duration</string>
     <string name="hue">Hue</string>
     <string name="events_demo_label">Events</string>
-    <string name="events_demo_description">Demonstrates event handling.</string>
+    <string name="events_demo_description">Shows you exact lat/lng, zoom, tilt, bearing.</string>    <!-- Demonstrates event handling.-->
     <string name="fade_in">Fade In Tiles</string>
     <string name="fill_alpha">Fill Alpha</string>
     <string name="fill_hue">Fill Hue</string>

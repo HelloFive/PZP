@@ -20,6 +20,9 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.UiSettings;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -90,6 +93,15 @@ public class UiSettingsDemoActivity extends AppCompatActivity implements OnMapRe
         mUiSettings.setZoomGesturesEnabled(isChecked(R.id.zoom_gestures_toggle));
         mUiSettings.setTiltGesturesEnabled(isChecked(R.id.tilt_toggle));
         mUiSettings.setRotateGesturesEnabled(isChecked(R.id.rotate_toggle));
+
+        map.addMarker(new MarkerOptions()
+                .position(new LatLng(43.47263807808989, -80.54214913398027))
+                .title("DC Library")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+        map.addMarker(new MarkerOptions()
+                .position(new LatLng(43.68390318064219,-80.43112613260746))
+                .title("Elora Public Library")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
     }
 
     /**

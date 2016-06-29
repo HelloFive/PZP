@@ -16,9 +16,12 @@
 
 package com.example.mapdemo;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.UiSettings;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -29,6 +32,14 @@ import android.support.v7.app.AppCompatActivity;
  * This shows how to create a simple activity with a map and a marker on the map.
  */
 public class BasicMapDemoActivity extends AppCompatActivity implements OnMapReadyCallback {
+
+    private GoogleMap mMap;
+
+    private UiSettings mUISettings;
+
+
+    public LatLng POS_DC = new LatLng(43.47263807808989, -80.54214913398027);
+    public LatLng POS_EloraLibrary = new LatLng(43.68390318064219,-80.43112613260746);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,8 +58,36 @@ public class BasicMapDemoActivity extends AppCompatActivity implements OnMapRead
      */
     @Override
     public void onMapReady(GoogleMap map) {
-//        map.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
-        map.addMarker(new MarkerOptions().position(new LatLng(43.463889,-80.525833)).title("Marker"));
+
+        map.addMarker(new MarkerOptions()
+                .position(POS_DC)
+                .title("DC Library")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+        map.addMarker(new MarkerOptions()
+                .position(POS_EloraLibrary)
+                .title("Elora Public Library")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+//        map.addMarker(new MarkerOptions()
+//                .position(new LatLng(43.600681479915146,-80.56106708943844))
+//                .title("North Waterloo Veterinary Hospital")
+//                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN)));
+
+        mMap = map;
+        mUISettings = mMap.getUiSettings();
+
+
+        mMap.setMyLocationEnabled(true);
+        mMap.setIndoorEnabled(false);
+//        mMap.getMinZoomLevel();
+//        mMap.getCameraPosition()      // still need to get camera target position
+        mMap.setBuildingsEnabled(true);
+        mUISettings.setRotateGesturesEnabled(false);
+        mUISettings.setTiltGesturesEnabled(false);
+        mUISettings.setZoomControlsEnabled(true);   // expecting to be +/- option
+        mUISettings.setCompassEnabled(true);
+        mUISettings.setMyLocationButtonEnabled(true);
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(POS_DC,17.0f));
+
 
     }
 }

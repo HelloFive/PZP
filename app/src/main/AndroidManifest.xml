@@ -59,10 +59,6 @@
         </activity>
 
         <activity
-            android:name=".A_PZP"
-            android:label="@string/A_PZP_label"/>
-
-        <activity
             android:name=".LegalInfoActivity"
             android:label="@string/legal_info"/>
         <activity

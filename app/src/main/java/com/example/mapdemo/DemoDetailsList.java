@@ -26,23 +26,18 @@ public final class DemoDetailsList {
     }
 
     public static final DemoDetails[] DEMOS = {
-            /*
-            new DemoDetails("PZP Map",
-                    "Launches PZP",
-                    A_PZP.class),
-            */
-            new DemoDetails(R.string.basic_map_demo_label,
-                    R.string.basic_map_demo_description,
+            new DemoDetails(R.string.basic_map_demo_label,      // Name changed to PZP Test in strings.xml
+                    R.string.basic_map_demo_description,        // Description has also changed.
                     BasicMapDemoActivity.class),
             new DemoDetails(R.string.ui_settings_demo_label,
                     R.string.ui_settings_demo_description,
                     UiSettingsDemoActivity.class),
-            new DemoDetails(R.string.circle_demo_label,
-                    R.string.circle_demo_description,
-                    CircleDemoActivity.class),
             new DemoDetails(R.string.events_demo_label,
                     R.string.events_demo_description,
                     EventsDemoActivity.class),
+            new DemoDetails(R.string.circle_demo_label,
+                    R.string.circle_demo_description,
+                    CircleDemoActivity.class),
             new DemoDetails(R.string.layers_demo_label,         // On Buildings, Off Indoor
                     R.string.layers_demo_description,
                     LayersDemoActivity.class),
