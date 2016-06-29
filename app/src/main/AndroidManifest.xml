@@ -135,21 +135,6 @@
             android:name=".SplitStreetViewPanoramaAndMapDemoActivity"
             android:label="@string/split_street_view_panorama_and_map_demo_label"/>
         <activity
-            android:name=".StreetViewPanoramaBasicDemoActivity"
-            android:label="@string/street_view_panorama_basic_demo_label"/>
-        <activity
-            android:name=".StreetViewPanoramaEventsDemoActivity"
-            android:label="@string/street_view_panorama_events_demo_label"/>
-        <activity
-            android:name=".StreetViewPanoramaNavigationDemoActivity"
-            android:label="@string/street_view_panorama_navigation_demo_label"/>
-        <activity
-            android:name=".StreetViewPanoramaOptionsDemoActivity"
-            android:label="@string/street_view_panorama_options_demo_label"/>
-        <activity
-            android:name=".StreetViewPanoramaViewDemoActivity"
-            android:label="@string/street_view_panorama_view_demo_label"/>
-        <activity
             android:name=".TileCoordinateDemoActivity"
             android:label="@string/tile_coordinate_demo_label"/>
         <activity
