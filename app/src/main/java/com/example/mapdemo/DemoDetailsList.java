@@ -26,6 +26,11 @@ public final class DemoDetailsList {
     }
 
     public static final DemoDetails[] DEMOS = {
+            /*
+            new DemoDetails("PZP Map",
+                    "Launches PZP",
+                    A_PZP.class),
+            */
             new DemoDetails(R.string.basic_map_demo_label,
                     R.string.basic_map_demo_description,
                     BasicMapDemoActivity.class),

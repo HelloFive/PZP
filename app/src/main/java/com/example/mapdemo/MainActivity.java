@@ -35,19 +35,18 @@ import android.widget.ListView;
  * <p>
  * The main layout lists the demonstrated features, with buttons to launch them.
  */
-public final class MainActivity extends AppCompatActivity
-        implements AdapterView.OnItemClickListener {
+public final class MainActivity extends AppCompatActivity {
 
 
     /**
      * A custom array adapter that shows a {@link FeatureView} containing details about the demo.
      */
-    private static class CustomArrayAdapter extends ArrayAdapter<DemoDetails> {
+//    private static class CustomArrayAdapter extends ArrayAdapter<DemoDetails> {
 
         /**
          * @param demos An array containing the details of the demos to be displayed.
          */
-        public CustomArrayAdapter(Context context, DemoDetails[] demos) {
+/*        public CustomArrayAdapter(Context context, DemoDetails[] demos) {
             super(context, R.layout.feature, R.id.title, demos);
         }
 
@@ -72,22 +71,23 @@ public final class MainActivity extends AppCompatActivity
 
             return featureView;
         }
-    }
+    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-        ListView list = (ListView) findViewById(R.id.list);
+        //setContentView(R.layout.main);
+        /*ListView list = (ListView) findViewById(R.id.list);
 
         ListAdapter adapter = new CustomArrayAdapter(this, DemoDetailsList.DEMOS);
 
         list.setAdapter(adapter);
         list.setOnItemClickListener(this);
-        list.setEmptyView(findViewById(R.id.empty));
+        list.setEmptyView(findViewById(R.id.empty));*/
+        startActivity(new Intent(this, UiSettingsDemoActivity.class));
     }
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.activity_main, menu);
@@ -108,5 +108,5 @@ public final class MainActivity extends AppCompatActivity
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         DemoDetails demo = (DemoDetails) parent.getAdapter().getItem(position);
         startActivity(new Intent(this, demo.activityClass));
-    }
+    }*/
 }
