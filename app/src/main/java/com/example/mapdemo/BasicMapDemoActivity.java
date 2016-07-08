@@ -87,10 +87,10 @@ public class BasicMapDemoActivity extends AppCompatActivity
         mMap = map;
         mUISettings = mMap.getUiSettings();
 
-
+/*      Modifying Settings  */
         mMap.setMyLocationEnabled(true);
         mMap.setIndoorEnabled(false);
-//        mMap.getMinZoomLevel();
+//        mMap.getMinZoomLevel();       // If exist, 10
 //        mMap.getCameraPosition()      // still need to get camera target position
         mMap.setBuildingsEnabled(true);
         mUISettings.setRotateGesturesEnabled(false);
@@ -98,7 +98,15 @@ public class BasicMapDemoActivity extends AppCompatActivity
         mUISettings.setZoomControlsEnabled(true);   // expecting to be +/- option
         mUISettings.setCompassEnabled(true);
         mUISettings.setMyLocationButtonEnabled(true);
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(POS_DC,17.0f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(POS_DC, 17.0f));
+
+
+
+        CameraUpdateFactory.scrollBy(200.0f, 200.0f);
+
+        // give you a CameraUpdate that increases (or decreases, if the value is
+        // negative) the zoom level by the given value.
+        CameraUpdateFactory.zoomBy(200000000);
 
 
         map.setOnMapClickListener(this);
