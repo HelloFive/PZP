@@ -37,7 +37,7 @@ import android.widget.TextView;
 /**
  * This shows how to create a simple activity with a map and a marker on the map.
  */
-public class BasicMapDemoActivity extends AppCompatActivity
+public class PZP extends AppCompatActivity
         implements GoogleMap.OnMapClickListener, GoogleMap.OnMapLongClickListener, GoogleMap.OnCameraChangeListener,
         OnMapReadyCallback {
 
@@ -54,18 +54,30 @@ public class BasicMapDemoActivity extends AppCompatActivity
     public LatLng POS_DC = new LatLng(43.47263807808989, -80.54214913398027);
     public LatLng POS_EloraLibrary = new LatLng(43.68390318064219,-80.43112613260746);
 
+//    Marker markDC = (new Marker()
+//            .position(POS_DC)
+//            .title("DC Library")
+//            .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+
+//    public static int minZoom;
+
+
+//    private LatLngBounds AUSTRALIA = new LatLngBounds(new LatLng(-44, 113), new LatLng(-10, 154));
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.basic_demo);
 
-        mTapTextView = (TextView) findViewById(R.id.tap_text);
-        mCameraTextView = (TextView) findViewById(R.id.camera_text);
-
-        SupportMapFragment mapFragment =
-                (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
+//        // This box shows the CameraPosition, located below Top blue box.
+//        mTapTextView = (TextView) findViewById(R.id.tap_text);
+//        mCameraTextView = (TextView) findViewById(R.id.camera_text);
+//
+//        SupportMapFragment mapFragment =
+//                (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+//        mapFragment.getMapAsync(this);
     }
 
     /**
@@ -109,8 +121,8 @@ public class BasicMapDemoActivity extends AppCompatActivity
         mUISettings.setMyLocationButtonEnabled(true);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(POS_DC, 17.0f));
 
-//  Scaling and Zooming factor not working...
 
+//  Scaling and Zooming factor not working...
         CameraUpdateFactory.scrollBy(200.0f, 200.0f);
 
         // give you a CameraUpdate that increases (or decreases, if the value is
@@ -121,22 +133,20 @@ public class BasicMapDemoActivity extends AppCompatActivity
         map.setOnMapClickListener(this);
         map.setOnMapLongClickListener(this);
         map.setOnCameraChangeListener(this);
-//        On touch listener, parse singer touch
 
 
-//      Problem: If used, EventPart does not work.
-//        mMap.setOnCameraChangeListener(new GoogleMap.OnCameraChangeListener() {
-//            // Listener for change in Zoom
-//            private float currentZoom = -1;
-//            @Override
-//            public void onCameraChange(CameraPosition pos) {
-//                if (pos.zoom != currentZoom){
-//                    currentZoom = pos.zoom;
-//                    // shall save data!
-//                    System.out.println("          >---------- *Pinch* ----------<");
-//                }
-//            }
-//        });
+        mMap.setOnCameraChangeListener(new GoogleMap.OnCameraChangeListener() {
+            // Listener for change in Zoom
+            private float currentZoom = -1;
+            @Override
+            public void onCameraChange(CameraPosition pos) {
+                if (pos.zoom != currentZoom){
+                    currentZoom = pos.zoom;
+                    // shall save data!
+                    System.out.println("----------***-----------");
+                }
+            }
+        });
 
 //        mMap.setOnMarkerClickListener();
 
@@ -144,7 +154,7 @@ public class BasicMapDemoActivity extends AppCompatActivity
 
             @Override
             public void onMapClick(LatLng latlng) {
-                System.out.println("         <========== *Zoom* ==========>          ");
+                System.out.println("         ========== *** ==========>          ");
 //                Intent intent = new Intent(MapActivity.this,
 //                        ForecastActivity.class);
 //                Bundle extras = new Bundle();

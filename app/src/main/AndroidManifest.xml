@@ -64,45 +64,6 @@
         <activity
             android:name=".BasicMapDemoActivity"
             android:label="@string/basic_map_demo_label"/>
-        <activity
-            android:name=".CircleDemoActivity"
-            android:label="@string/circle_demo_label"/>
-        <activity
-            android:name=".EventsDemoActivity"
-            android:label="@string/events_demo_label"/>
-        <activity
-            android:name=".LayersDemoActivity"
-            android:label="@string/layers_demo_label"/>
-        <activity
-            android:name=".LocationSourceDemoActivity"
-            android:label="@string/location_source_demo_label"/>
-        <activity
-            android:name=".MyLocationDemoActivity"
-            android:label="@string/my_location_demo_label"/>
-        <activity
-            android:name=".PolygonDemoActivity"
-            android:label="@string/polygon_demo_label"/>
-        <activity
-            android:name=".PolylineDemoActivity"
-            android:label="@string/polyline_demo_label"/>
-        <activity
-            android:name=".ProgrammaticDemoActivity"
-            android:label="@string/programmatic_demo_label"/>
-        <activity
-            android:name=".RawMapViewDemoActivity"
-            android:label="@string/raw_map_view_demo_label"/>
-        <activity
-            android:name=".RetainMapDemoActivity"
-            android:label="@string/retain_map_demo_label"/>
-        <activity
-            android:name=".SaveStateDemoActivity"
-            android:label="@string/save_state_demo_label"/>
-        <activity
-            android:name=".TileCoordinateDemoActivity"
-            android:label="@string/tile_coordinate_demo_label"/>
-        <activity
-            android:name=".UiSettingsDemoActivity"
-            android:label="@string/ui_settings_demo_label"/>
 
     </application>
 
